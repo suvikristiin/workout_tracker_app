@@ -31,7 +31,7 @@ const NavigationBar = () => {
             </Nav.Link>
           </Nav>
           <Nav>
-            <Button className="logOutButton mx-3">Log out</Button>
+            <Button className="logOutButton">Log out</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
