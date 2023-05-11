@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+
+.nav-bar {
+  background-color: #5d1049;
+}
+
+.appName {
+  color: #ffffff;
+  font-size: 28px;
+  font-family: "Anton", sans-serif;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.appName:hover {
+  color: #ffffff;
+}
+
+.workout-link {
+  color: #ffffff;
+}
+
+.workout-link:hover {
+  color: #ffffff;
+}
+
+.exercise-link {
+  color: #ffffff;
+}
+
+.exercise-link:hover {
+  color: #ffffff;
+}
+
+.addWorkout-link {
+  color: #ffffff;
+}
+
+.addWorkout-link:hover {
+  color: #ffffff;
+}
+
+.addTrainingPlan-link {
+  color: #ffffff;
+}
+
+.addTrainingPlan-link:hover {
+  color: #ffffff;
+}
+
+.logOutButton {
+  background-color: #4e0d3a;
+  color: #ffffff;
+  border-color: #4e0d3a;
+}
+
+.logOutButton:hover {
+  background-color: #5d1049;
+  border-color: #5d1049;
+}
+
+.logOutButton:not(:disabled):active {
+  background-color: #4e0d3a;
+  border-color: #4e0d3a;
+}
+
+@media (max-width: 767px) {
+  .logOutButton {
+    width: 120px;
+  }
+
+  .nav-links {
+    padding-left: 20px;
+  }
+}
