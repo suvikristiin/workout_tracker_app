@@ -4,6 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
+import { Link }  from 'react-router-dom/';
+
 
 const NavigationBar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -17,16 +19,16 @@ const NavigationBar = () => {
         <Navbar.Brand className="appName mx-auto">Workout tracker</Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="nav-links me-auto">
-            <Nav.Link className="workout-link" onClick={() => setExpanded(false)}>
+            <Nav.Link className="workout-link" as={Link} to="/" onClick={() => setExpanded(false)}>
               Workouts
             </Nav.Link>
-            <Nav.Link className="exercise-link" onClick={() => setExpanded(false)}>
+            <Nav.Link className="exercise-link" as={Link} to="/exercises" onClick={() => setExpanded(false)}>
               Exercises
             </Nav.Link>
-            <Nav.Link className="addWorkout-link" onClick={() => setExpanded(false)}>
+            <Nav.Link className="addWorkout-link" as={Link} to="/add-workout" onClick={() => setExpanded(false)}>
               Add workout
             </Nav.Link>
-            <Nav.Link className="addTrainingPlan-link" onClick={() => setExpanded(false)}>
+            <Nav.Link className="addTrainingPlan-link" as={Link} to="/training-plan" onClick={() => setExpanded(false)}>
               Add training plan
             </Nav.Link>
           </Nav>
