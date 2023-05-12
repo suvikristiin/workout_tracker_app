@@ -1,16 +1,25 @@
 import React from "react";
-//import AllExercises from "./components/AllExercises.js";
-//import AllWorkouts from "./components/AllWorkouts.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AllExercises from "./components/AllExercises.js";
+import AllWorkouts from "./components/AllWorkouts.js";
 //import Login from "./components/Login.js"
 //import Register from "./components/Register.js"
-import NavigationBar from "./components/NavigationBar.js"
-//import NewWorkout.js from "./components/NewWorkout.js"
-//import NewTrainingPlan from "./components/NewTrainingPlan.js"
+import NavigationBar from "./components/NavigationBar.js";
+import NewWorkout from "./components/NewWorkout.js";
+import NewTrainingPlan from "./components/NewTrainingPlan.js"
 
 function App() {
   return (
     <div className="App">
-      <NavigationBar />
+      <BrowserRouter>
+        <NavigationBar />
+        <Routes>
+          <Route path="/" element={<AllWorkouts />} />
+          <Route path="/exercises" element={<AllExercises />} />
+          <Route path="/add-workout" element={<NewWorkout />} />
+          <Route path="/training-plan" element={<NewTrainingPlan />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
