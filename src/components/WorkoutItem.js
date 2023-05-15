@@ -1,6 +1,10 @@
+import React from "react";
+import { useParams } from "react-router-dom"
 
-const ExerciseItem = ({ workout }) => {
-  return ( <></> );
+const WorkoutItem = () => {
+  let params = useParams()
+
+  return ( <h1>Workout Item {params.id}</h1> );
 }
  
-export default ExerciseItem;
+export default WorkoutItem;
