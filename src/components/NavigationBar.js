@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
-import { Link }  from 'react-router-dom/';
+import { Link }  from 'react-router-dom';
 
 
 const NavigationBar = () => {
@@ -19,7 +19,7 @@ const NavigationBar = () => {
         <Navbar.Brand className="appName mx-auto">Workout tracker</Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="nav-links me-auto">
-            <Nav.Link className="workout-link" as={Link} to="/" onClick={() => setExpanded(false)}>
+            <Nav.Link className="workout-link" as={Link} to="*" onClick={() => setExpanded(false)}>
               Workouts
             </Nav.Link>
             <Nav.Link className="exercise-link" as={Link} to="/exercises" onClick={() => setExpanded(false)}>

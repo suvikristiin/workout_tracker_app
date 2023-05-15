@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+
+.workout-row {
+  height: 70px;
+  border: 3px solid;
+  border-radius: 10px;
+  border-color: #4E0D3A;
+  color: #5d1049;
+  align-items: center;
+}
+
+
+
+.plan-column {
+  border: 5px solid;
+  border-radius: 10px;
+  border-color: #4E0D3A;
+}
+
+.week-number {
+  font-size: 20px;
+  color: #5d1049;
+}
+
+.workoutsPage-title {
+  font-family: "Anton", sans-serif;
+  font-size: 42px;
+  color: #4E0D3A;
+}
+
+.plan-title {
+  text-decoration: underline;
+  color: #4E0D3A;
+}
+
+.workout-date {
+  font-size: 20px;
+  min-width: 140px;
+  
+}
+
+.workout-name {
+  font-size: 28px;
+  margin-left: 30px;
+}
+
+.workout-container {
+  width: 50%;
+}
+
+.workout-row:hover{
+  background-color: #5d1049;
+  color: #ffffff;
+
+}
+
+
+@media (max-width: 1100px) {
+  .workout-container {
+    width: 70%;
+  }
+  .workout-date {
+    font-size: 18px;
+    min-width: 140px;
+  }
+  
+  .workout-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .workout-container {
+    width: 100%;
+  }
+  .workout-date {
+    font-size: 14px;
+    min-width: 110px;
+  }
+  
+  .workout-name {
+    font-size: 22px;
+    margin-left: 0px;
+  }
+
+  .week-number {
+    font-size: 16px;
+  }
+}
