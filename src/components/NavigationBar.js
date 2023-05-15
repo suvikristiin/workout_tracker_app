@@ -19,7 +19,7 @@ const NavigationBar = () => {
         <Navbar.Brand className="appName mx-auto">Workout tracker</Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="nav-links me-auto">
-            <Nav.Link className="workout-link" as={Link} to="*" onClick={() => setExpanded(false)}>
+            <Nav.Link className="workout-link" as={Link} to="/" onClick={() => setExpanded(false)}>
               Workouts
             </Nav.Link>
             <Nav.Link className="exercise-link" as={Link} to="/exercises" onClick={() => setExpanded(false)}>
