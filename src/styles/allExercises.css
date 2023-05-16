@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+
+.exercise-row {
+  height: 70px;
+  border: 3px solid;
+  border-radius: 10px;
+  border-color: #4E0D3A;
+  box-shadow: 1px 1px 5px #5d1049;
+  align-items: center;
+  color: #5d1049
+}
+
+.exercise-link {
+  text-decoration: none;
+}
+
+.exercisesPage-title {
+  font-family: "Anton", sans-serif;
+  font-size: 42px;
+  color: #4E0D3A;
+}
+
+.exercises-container {
+  width: 50%;
+}
+
+.exercise-name {
+  font-size: 28px;
+}
+
+.exercise-row:hover {
+  border-color: #4E0D3A;
+  box-shadow: 1px 1px 15px #5d1049;
+}
+
+@media (max-width: 1200px) {
+  .exercises-container {
+    width: 70%;
+  }
+  
+  .exercise-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .exercises-container {
+    width: 100%;
+  }
+  
+  .exercise-name {
+    font-size: 22px;
+  }
+
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/allWorkouts.css";
 import { Container, Col, Row } from "react-bootstrap";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const AllWorkouts = () => {
   const workoutsData = {
     "Bodybuilding program": [
@@ -91,43 +91,44 @@ const AllWorkouts = () => {
   };
 
   return (
-    <>
-      <Container className="workout-container justify-content-center">
-        <Row>
-          <Col>
-            <h1 className="workoutsPage-title text-center my-5">All workouts</h1>
-          </Col>
-        </Row>
-        {Object.keys(workoutsData).map((trainingPlan, plan_id) => (
-          <Col className="plan-column mb-5 px-5" key={plan_id}>
-            <Row>
+    <Container className="workout-container">
+      <Row>
+        <Col>
+          <h1 className="workoutsPage-title text-center my-5">All workouts</h1>
+        </Col>
+      </Row>
+      {Object.keys(workoutsData).map((trainingPlan, plan_id) => (
+        <Col className="plan-column mb-5 px-5" key={plan_id}>
+          <Row className="plan-row mx-auto">
+            <Col>
+              <h2 className="plan-title text-center mt-5">{trainingPlan}</h2>
+            </Col>
+          </Row>
+          {workoutsData[trainingPlan].map((week, week_id) => (
+            <Row key={week_id}>
               <Col>
-                <h2 className="plan-title text-center mt-5">{trainingPlan}</h2>
+                <Row>
+                  <Col>
+                    <h4 className="week-number text-center mt-3 mb-3">Week {week.week}</h4>
+                  </Col>
+                </Row>
+                {week.workouts.map((workout, workout_id) => (
+                  <Link
+                    className="workout-link"
+                    key={workout_id}
+                    to={"/workouts/" + workout.id}>
+                    <Row className="workout-row mb-4">
+                      <Col className="col-4 workout-date">{workout.date}</Col>
+                      <Col className="workout-name">{workout.name}</Col>
+                    </Row>
+                  </Link>
+                ))}
               </Col>
             </Row>
-            {workoutsData[trainingPlan].map((week, week_id) => (
-              <Row key={week_id}>
-                <Col>
-                  <Row>
-                    <Col>
-                      <h4 className="week-number text-center mt-3 mb-3">Week {week.week}</h4>
-                    </Col>
-                  </Row>
-                  {week.workouts.map((workout, workout_id) => (
-                    <Link key={workout_id} to={"/workouts/" + workout.id} style={{ textDecoration: 'none' }}>
-                      <Row className="workout-row mb-4">
-                        <Col className="col-4 workout-date">{workout.date}</Col>
-                        <Col className="workout-name">{workout.name}</Col>
-                      </Row>
-                    </Link>
-                  ))}
-                </Col>
-              </Row>
-            ))}
-          </Col>
-        ))}
-      </Container>
-    </>
+          ))}
+        </Col>
+      ))}
+    </Container>
   );
 };
 

@@ -5,15 +5,22 @@
   border: 3px solid;
   border-radius: 10px;
   border-color: #4E0D3A;
-  color: #5d1049;
+  box-shadow: 1px 1px 5px #5d1049;
   align-items: center;
+  color: #5d1049
 }
 
+.workout-link {
+  text-decoration: none;
+}
 
+.plan-row {
+  width: 80%;
+}
 
 .plan-column {
   border: 5px solid;
-  border-radius: 10px;
+  border-radius: 20px;
   border-color: #4E0D3A;
 }
 
@@ -28,9 +35,10 @@
   color: #4E0D3A;
 }
 
+
 .plan-title {
-  text-decoration: underline;
   color: #4E0D3A;
+  border-bottom: 3px solid #4E0D3A;
 }
 
 .workout-date {
@@ -49,13 +57,12 @@
 }
 
 .workout-row:hover{
-  background-color: #5d1049;
-  color: #ffffff;
-
+  border-color: #4E0D3A;
+  box-shadow: 1px 1px 15px #5d1049;
 }
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .workout-container {
     width: 70%;
   }
@@ -85,5 +92,9 @@
 
   .week-number {
     font-size: 16px;
+  }
+
+  .plan-row {
+    width: 100%;
   }
 }
