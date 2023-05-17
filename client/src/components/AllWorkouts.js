@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/allWorkouts.css";
 import { Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+//import WorkoutItem from "./WorkoutItem";
+
 const AllWorkouts = () => {
   const workoutsData = {
     "Bodybuilding program": [
@@ -9,12 +11,14 @@ const AllWorkouts = () => {
         week: 19,
         workouts: [
           {
-            id: 4,
+            id: 11,
+            workout_id: 6,
             name: "Workout nro.1",
             date: "2023-05-10"
           },
           {
-            id: 5,
+            id: 10,
+            workout_id: 5,
             name: "Workout nro.2",
             date: "2023-05-09"
           }
@@ -24,17 +28,20 @@ const AllWorkouts = () => {
         week: 18,
         workouts: [
           {
-            id: 6,
+            id: 9,
+            workout_id: 4,
             name: "Workout nro.3",
             date: "2023-05-05"
           },
           {
-            id: 4,
+            id: 8,
+            workout_id: 6,
             name: "Workout nro.1",
             date: "2023-05-04"
           },
           {
-            id: 5,
+            id: 7,
+            workout_id: 5,
             name: "Workout nro.2",
             date: "2023-05-02"
           }
@@ -45,6 +52,7 @@ const AllWorkouts = () => {
         workouts: [
           {
             id: 6,
+            workout_id: 4,
             name: "Workout nro.3",
             date: "2023-04-28"
           }
@@ -56,12 +64,14 @@ const AllWorkouts = () => {
         week: 16,
         workouts: [
           {
-            id: 4,
+            id: 5,
+            workout_id: 3,
             name: "Workout nro.1",
             date: "2023-04-20"
           },
           {
-            id: 5,
+            id: 4,
+            workout_id: 2,
             name: "Workout nro.2",
             date: "2023-04-18"
           }
@@ -71,17 +81,20 @@ const AllWorkouts = () => {
         week: 15,
         workouts: [
           {
-            id: 1,
+            id: 3,
+            workout_id: 3,
             name: "Workout nro.1",
             date: "2023-04-14"
           },
           {
             id: 2,
+            workout_id: 2,
             name: "Workout nro.2",
             date: "2023-04-12"
           },
           {
-            id: 3,
+            id: 1,
+            workout_id: 1,
             name: "Workout nro.3",
             date: "2023-04-10"
           }
@@ -91,7 +104,7 @@ const AllWorkouts = () => {
   };
 
   return (
-    <Container className="workout-container">
+    <Container className="workouts-container">
       <Row>
         <Col>
           <h1 className="workoutsPage-title text-center my-5">All workouts</h1>
@@ -109,14 +122,15 @@ const AllWorkouts = () => {
               <Col>
                 <Row>
                   <Col>
-                    <h4 className="week-number text-center mt-3 mb-3">Week {week.week}</h4>
+                    <h4 className="week-number text-center my-3">Week {week.week}</h4>
                   </Col>
                 </Row>
                 {week.workouts.map((workout, workout_id) => (
                   <Link
                     className="workout-link"
                     key={workout_id}
-                    to={"/workouts/" + workout.id}>
+                    to={"/workouts/" + workout.id}
+                    state={workout}>
                     <Row className="workout-row mb-4">
                       <Col className="col-4 workout-date">{workout.date}</Col>
                       <Col className="workout-name">{workout.name}</Col>

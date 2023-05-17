@@ -53,6 +53,10 @@ const AllExercises = () => {
           {
             id: 3,
             name: "Bench press"
+          },
+          {
+            id: 4,
+            name: "Leg press"
           }
         ]
       }

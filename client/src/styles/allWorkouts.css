@@ -52,7 +52,7 @@
   margin-left: 30px;
 }
 
-.workout-container {
+.workouts-container {
   width: 50%;
 }
 
@@ -63,7 +63,7 @@
 
 
 @media (max-width: 1200px) {
-  .workout-container {
+  .workouts-container {
     width: 70%;
   }
   .workout-date {
@@ -77,7 +77,7 @@
 }
 
 @media (max-width: 767px) {
-  .workout-container {
+  .workouts-container {
     width: 100%;
   }
   .workout-date {
