@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Anton");
 
-.exerciseResult-column {
+.workoutResult-column {
   border: 3px solid;
   border-radius: 10px;
   border-color: #4E0D3A;
   box-shadow: 1px 1px 5px #5d1049;
   align-items: center;
 }
+
+
 
 .set-col {
   min-width: 150px;
@@ -17,35 +19,39 @@
   color: #4E0D3A;
 }
 
-.exercise-name-row {
+.workout-name-row {
   border-bottom: 3px solid #4E0D3A;
   background-color: #5d1049;
   box-shadow: 1px 1px 5px #5d1049;
+  align-items: center;
 }
 
-.exercise-name-col {
+.workout-date-col {
+  color: #4E0D3A
+}
+
+.workout-name-col {
   font-size: 28px;
-  margin-left: 30px;
   color: #ffffff;
 }
 
-.selectWorkout-column {
+.selectExercise-column {
   border: 5px solid;
   border-radius: 20px;
   border-color: #4E0D3A;
 }
 
-.selectWorkout-title {
+.selectedExercise-title {
   font-family: "Anton", sans-serif;
   font-size: 42px;
   color: #4E0D3A;
 }
 
-.selectWorkout-date {
+.selectPlan-title {
   color: #4E0D3A;
 }
 
-.selectWorkout-container {
+.selectedExercise-container {
   width: 50%
 }
 
@@ -70,9 +76,11 @@
 }
 
 @media (max-width: 1200px) {
-  .selectWorkout-container {
+  .selectedExercise-container {
     width: 70%;
   }
+
+
 
   .workout-name-col {
     font-size: 24px;
@@ -81,6 +89,7 @@
   .set-col {
     min-width: 130px;
   }
+
 }
 
 @media (max-width: 767px) {
@@ -89,9 +98,11 @@
     min-width: 120px;
   }
 
-  .selectWorkout-container {
+
+  .selectedExercise-container {
     width: 100%;
   }
+
 
   .volume-title {
     font-size: 22px;
@@ -112,4 +123,5 @@
   .sets-row {
     font-size: 16px;
   }
+
 }

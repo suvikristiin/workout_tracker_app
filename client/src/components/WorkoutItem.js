@@ -453,10 +453,10 @@ const WorkoutItem = () => {
                   <Col className="volume-title">Change in workout volume</Col>
                 </Row>
                 <Row className="volume-previous">
-                  <Col>to the previous workout: {exercise.volumeToPrevious}</Col>
+                  <Col>to the previous workout: {exercise.volumeToPrevious} kg</Col>
                 </Row>
                 <Row className="volume-period-start mb-3">
-                  <Col>to the beginning of the training period: {exercise.volumeToStart}</Col>
+                  <Col>to the beginning of the training period: {exercise.volumeToStart} kg</Col>
                 </Row>
               </Col>
             ))}
