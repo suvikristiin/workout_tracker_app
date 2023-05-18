@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/" element={<AllWorkouts />} />
           <Route path="/workouts/:id" element={<WorkoutItem />} />
           <Route exact path="/exercises" element={<AllExercises />} />
-          <Route path="/exercises/:id" element={<ExerciseItem />}></Route>
+          <Route path="/exercises/:id" element={<ExerciseItem />} />
           <Route path="/add-workout" element={<NewWorkout />} />
           <Route path="/training-plan" element={<NewTrainingPlan />} />
         </Routes>

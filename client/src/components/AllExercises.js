@@ -78,7 +78,11 @@ const AllExercises = () => {
             </Col>
           </Row>
           {plan.exercises.map((exercise, exercise_id) => (
-            <Link className="exercise-link" key={exercise_id} to={"/exercises/" + exercise.id}>
+            <Link
+              className="exercise-link"
+              key={exercise_id}
+              to={"/exercises/" + exercise.id}
+              state={{plan: plan.id, exercise: exercise}}>
               <Row className="exercise-row mb-4">
                 <Col className="exercise-name text-center">{exercise.name}</Col>
               </Row>
