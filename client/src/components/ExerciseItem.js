@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { Container, Col, Row } from "react-bootstrap";
 import "../styles/exerciseItem.css";
 
-
 const ExerciseItem = () => {
   const location = useLocation();
   const selectedExercise = location.state;
@@ -460,43 +459,49 @@ const ExerciseItem = () => {
     <Container className="selectedExercise-container">
       <Row>
         <Col>
-          <h1 className="selectedExercise-title text-center my-5">{selectedExercise.exercise.name}</h1>
+          <h1 className="selectedExercise-title text-center my-5">
+            {selectedExercise.exercise.name}
+          </h1>
         </Col>
       </Row>
-      <Col className="selectExercise-column mb-4 px-5">
+      <Col className="selectExercise-column mb-5 px-5">
         <Row className="selectedExercise-row-title mx-auto">
           <Col>
-            <h2 className="selectPlan-title text-center my-4">{exerciseResults.title}</h2>
+            <h3 className="selectPlan-title text-center my-4">{exerciseResults.title}</h3>
           </Col>
         </Row>
         {exerciseResults.workouts.map((workout, workout_id) => (
-          <Col className="workoutResult-column mb-4" key={workout_id}>
-            <Row className="workout-name-row mx-auto mb-1">
-              <Col className="workout-name-col text-center my-2">{workout.name}</Col>
-            </Row>
-            <Row className="workout-date-row mx-auto mb-2">
-              <Col className="workout-date-col text-center">{workout.date}</Col>
-            </Row>
-            <Row>
-              <Col className="workout-results-title text-center mb-2">Workout results</Col>
-            </Row>
-            <Row className="sets-row mb-3 px-0 mx-auto justify-content-center">
-              {workout.score.map((set, set_id) => (
-                <Col className="set-col col-3 px-0 text-center" key={set_id}>
-                  {set.reps} reps, {set.weight} kg
+          <Row key={workout_id}>
+            <Col className="workoutResult-column mb-4">
+              <Row className="workout-name-row mb-2">
+                <Col className="mx-auto">
+                  <p className="workout-name-col text-center my-2">{workout.name}</p>
                 </Col>
-              ))}
-            </Row>
-            <Row className="px-2 text-center">
-              <Col className="volume-title">Change in workout volume</Col>
-            </Row>
-            <Row className="volume-previous text-center">
-              <Col>to the previous workout: {workout.volumeToPrevious} kg</Col>
-            </Row>
-            <Row className="volume-period-start mb-3 text-center">
-              <Col>to the beginning of the training period: {workout.volumeToStart} kg</Col>
-            </Row>
-          </Col>
+              </Row>
+              <Row className="workout-date-row mx-auto mb-2">
+                <Col className="workout-date-col text-center">{workout.date}</Col>
+              </Row>
+              <Row>
+                <Col className="workout-results-title text-center mb-2">Workout results</Col>
+              </Row>
+              <Row className="sets-row mb-3 px-0 mx-auto justify-content-center">
+                {workout.score.map((set, set_id) => (
+                  <Col className="set-col col-3 px-0 text-center" key={set_id}>
+                    {set.reps} reps, {set.weight} kg
+                  </Col>
+                ))}
+              </Row>
+              <Row className="px-2 text-center">
+                <Col className="volume-title">Change in workout volume</Col>
+              </Row>
+              <Row className="volume-previous text-center">
+                <Col>to the previous workout: {workout.volumeToPrevious} kg</Col>
+              </Row>
+              <Row className="volume-period-start mb-3 text-center">
+                <Col>to the beginning of the training period: {workout.volumeToStart} kg</Col>
+              </Row>
+            </Col>
+          </Row>
         ))}
       </Col>
     </Container>

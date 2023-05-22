@@ -8,8 +8,6 @@
   align-items: center;
 }
 
-
-
 .set-col {
   min-width: 150px;
 }
@@ -78,12 +76,6 @@
 @media (max-width: 1200px) {
   .selectedExercise-container {
     width: 70%;
-  }
-
-
-
-  .workout-name-col {
-    font-size: 24px;
   }
 
   .set-col {
