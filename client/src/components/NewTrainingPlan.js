@@ -63,7 +63,7 @@ const NewTrainingPlan = () => {
     <Container className="newPlan-container">
       <Row>
         <Col>
-          <h1 className="newPlanPage-title text-center my-5">Add new training plan</h1>
+          <h1 className="newPlanPage-title text-center my-5">New training plan</h1>
         </Col>
       </Row>
       <Col className="trainingPlan-col mb-5 px-5">
@@ -72,6 +72,8 @@ const NewTrainingPlan = () => {
             <Row className="mx-auto my-5 w-75">
               <Col>
                 <Form.Control
+                  className="trainingPlan-form"
+                  size="lg"
                   type="text"
                   placeholder="Training plan name"
                   onChange={(e) => addNewPlanName(e)}
@@ -84,6 +86,7 @@ const NewTrainingPlan = () => {
                   <Col>
                     <Form.Control
                       className="workoutNameForm mx-auto"
+                      size="lg"
                       type="text"
                       placeholder="Workout name"
                       onChange={(e) => addNewWorkoutName(e, workout_id)}
@@ -92,17 +95,18 @@ const NewTrainingPlan = () => {
                 </Row>
 
                 {workout.exercises.map((exercise, exercise_id) => (
-                  <Row key={exercise_id} className="mb-2 mx-auto">
-                    <Col>
-                      <Form.Control type="text" placeholder="Exercise name" />
+                  <Row key={exercise_id} className="exerciseForm-row mb-2 mx-auto">
+                    <Col className="px-1">
+                      <Form.Control className="exerciseNameForm" size="lg" type="text" placeholder="Exercise name" />
                     </Col>
-                    <Col>
-                      <Form.Control type="text" placeholder="Number of sets" />
+                    <Col className="px-1">
+                      <Form.Control className="exerciseSetsForm" size="lg" type="text" placeholder="Number of sets" />
                     </Col>
                   </Row>
                 ))}
                 <Button
                   className="addExerciseButton mx-auto"
+                  size="lg"
                   type="submit"
                   onClick={(e) => {
                     addNewExercise(e, workout_id);
@@ -112,7 +116,7 @@ const NewTrainingPlan = () => {
               </Row>
             ))}
             <Row>
-              <Button className="addWorkoutButton mb-4 mx-auto" type="submit" onClick={(e) => addNewWorkout(e)}>
+              <Button className="addWorkoutButton mb-4 mx-auto" size="lg" type="submit" onClick={(e) => addNewWorkout(e)}>
                 Add new workout
               </Button>
             </Row>
@@ -120,7 +124,7 @@ const NewTrainingPlan = () => {
         </Form>
       </Col>
       <Row className="mb-5">
-        <Button className="addPlanButton mx-auto" type="submit" onClick={(e) => sendTrainingPlan(e)}>Add training plan</Button>
+        <Button className="addPlanButton mx-auto" size="lg" type="submit" onClick={(e) => sendTrainingPlan(e)}>Add training plan</Button>
       </Row>
     </Container>
   );
