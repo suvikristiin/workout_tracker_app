@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 import NewExerciseSet from "./NewExerciseSets";
+import "../styles/newWorkout.css"
 
 const NewExerciseResults = ({ exercise }) => {
   NewExerciseResults.propTypes = {

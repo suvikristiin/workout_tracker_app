@@ -6,6 +6,10 @@
   color: #4E0D3A;
 }
 
+.exercise-name {
+  font-size: 26px;
+}
+
 .newWorkout-container {
   width: 50%;
 }

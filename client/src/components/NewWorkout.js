@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/newWorkout.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import NewExerciseResults from "./NewExerciseResults";
+import NewExerciseSets from "./NewExerciseSets.js";
 
 const NewWorkout = () => {
   const [workoutsData] = useState([
@@ -26,7 +26,7 @@ const NewWorkout = () => {
               reps: 8,
               weight: 80
             }
-          ],
+          ]
         },
         {
           name: "Squat",
@@ -210,6 +210,18 @@ const NewWorkout = () => {
     console.log(selectedWorkout);
   };
 
+  const [exercisesResults] = useState([]);
+
+  const [sets, setSets] = useState([])
+  const [exerciseResults, setExerciseResults] = useState({});
+  
+  
+  const newExercise = exercisesResults.find((exercise) => exercise.name === exerciseResults.name)
+
+  console.log(newExercise)
+  console.log(exerciseResults)
+
+  console.log(exercisesResults)
 
   return (
     <Container className="newWorkout-container">
@@ -242,7 +254,40 @@ const NewWorkout = () => {
                   <Col key={workout_id}>
                     {workout.exercises.map((exercise, exercise_id) => (
                       <Row key={exercise_id}>
-                         <NewExerciseResults exercise={exercise}/>
+                        <Col className="newExercise-col mb-4">
+                          <Row>
+                            <Col className="exercise-name text-center mb-3">{exercise.name}</Col>
+                          </Row>
+                          {exercise.sets.map((set, set_id) => (
+                            <NewExerciseSets
+                              key={set_id}
+                              setId={set.id}
+                              sets={sets}
+                              setSets={setSets}
+                              exerciseResults={exerciseResults}
+                              setExerciseResults={setExerciseResults}
+                              exerciseName={exercise.name}
+                            />
+                          ))}
+                          <Row>
+                            <Col>
+                              <Row>
+                                <Col>The results in the previous workout</Col>
+                              </Row>
+                              <Row>
+                                {exercise.sets.map((set, set_id) => (
+                                  <Row key={set_id}>
+                                    <Col>Set {set_id + 1}</Col>
+                                    <Col>Reps:</Col>
+                                    <Col>{set.reps}</Col>
+                                    <Col>Weight:</Col>
+                                    <Col>{set.weight}</Col>
+                                  </Row>
+                                ))}
+                              </Row>
+                            </Col>
+                          </Row>
+                        </Col>
                       </Row>
                     ))}
                   </Col>
