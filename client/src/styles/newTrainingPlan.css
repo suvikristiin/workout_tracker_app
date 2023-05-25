@@ -28,8 +28,8 @@
 
 .addExerciseButton {
   width: 200px;
-  background-color: #4E0D3A;
-  border-color: #4E0D3A;
+  background-color: #4e0d3a;
+  border-color: #4e0d3a;
 }
 
 .addWorkoutButton {
@@ -78,13 +78,33 @@
   width: 60%;
 }
 
+.trainingPlan-form:focus {
+  border-color: #5d1049;
+  box-shadow: 1px 1px 3px #5d1049;
+}
+
+.exerciseNameForm:focus {
+  border-color: #5d1049;
+  box-shadow: 1px 1px 3px #5d1049;
+}
+
+.workoutNameForm:focus {
+  border-color: #5d1049;
+  box-shadow: 1px 1px 3px #5d1049;
+}
+
+.exerciseSetsForm:focus {
+  border-color: #5d1049;
+  box-shadow: 1px 1px 3px #5d1049;
+}
+
 @media (max-width: 1200px) {
   .newPlan-container {
     width: 70%;
   }
 
   .workoutNameForm {
-    width: 65%;
+    width: 75%;
   }
 
   .trainingPlan-row {
@@ -99,6 +119,38 @@
   }
 
   .workoutNameForm {
-    width: 85%;
+    width: 90%;
+  }
+
+  .trainingPlan-row {
+    padding: 20px 0px 20px 0px;
+  }
+
+  .trainingPlan-form {
+    font-size: 18px;
+  }
+
+  .workoutNameForm {
+    font-size: 18px;
+  }
+
+  .exerciseNameForm {
+    font-size: 18px;
+  }
+
+  .exerciseSetsForm {
+    font-size: 18px;
+  }
+
+  .addPlanButton {
+    font-size: 18px;
+  }
+
+  .addWorkoutButton {
+    font-size: 18px;
+  }
+
+  .addExerciseButton {
+    font-size: 18px;
   }
 }

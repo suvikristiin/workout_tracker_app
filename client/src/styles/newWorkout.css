@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+
+.newWorkoutPage-title {
+  font-family: "Anton", sans-serif;
+  font-size: 42px;
+  color: #4E0D3A;
+}
+
+.exercise-name {
+  font-size: 26px;
+}
+
+.newWorkout-container {
+  width: 50%;
+}
+
+.newWorkout-col {
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #4E0D3A;
+}
+
+.trainingPlan-row {
+  border: 3px solid;
+  border-radius: 10px;
+  border-color: #4E0D3A;
+  box-shadow: 1px 1px 5px #5d1049;
+  align-items: center;
+  color: #5d1049;
+  padding: 20px 20px 20px 20px;
+}
+
+.newExercise-col {
+  border: 3px solid;
+  border-radius: 10px;
+  border-color: #4E0D3A;
+  box-shadow: 1px 1px 5px #5d1049;
+  align-items: center;
+  color: #5d1049
+}
+
+.addNewWorkoutButton {
+  width: 200px;
+  background-color: #4E0D3A;
+  border-color: #4E0D3A;
+}
+
+.addNewWorkoutButton:hover {
+  background-color: #5d1049;
+  border-color: #5d1049;
+}
+
+.addNewWorkoutButton:not(:disabled):active {
+  background-color: #4e0d3a;
+  border-color: #4e0d3a;
+}
+
