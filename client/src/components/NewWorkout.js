@@ -202,7 +202,6 @@ const NewWorkout = () => {
     }
   ]);
 
-  const [exercisesResults, setExercisesResults] = useState([]);
   const [selectedWorkout, setSelectedWorkout] = useState("");
 
   const handleSelected = (e) => {
@@ -211,7 +210,6 @@ const NewWorkout = () => {
     console.log(selectedWorkout);
   };
 
-  console.log(exercisesResults)
 
   return (
     <Container className="newWorkout-container">
@@ -244,7 +242,7 @@ const NewWorkout = () => {
                   <Col key={workout_id}>
                     {workout.exercises.map((exercise, exercise_id) => (
                       <Row key={exercise_id}>
-                         <NewExerciseResults exercise={exercise} exercisesResults={exercisesResults} setExercisesResults={setExercisesResults}/>
+                         <NewExerciseResults exercise={exercise}/>
                       </Row>
                     ))}
                   </Col>

@@ -3,21 +3,25 @@ import { Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 import NewExerciseSet from "./NewExerciseSets";
 
-const NewExerciseResults = ({ exercise, exercisesResults, setExercisesResults}) => {
+const NewExerciseResults = ({ exercise }) => {
   NewExerciseResults.propTypes = {
     exercise: PropTypes.object,
     exercisesResults: PropTypes.array,
     setExercisesResults: PropTypes.func
   };
 
+  const [exercisesResults] = useState([]);
+
   const [sets, setSets] = useState([])
-  const [exerciseResults, setExerciseResults] = useState([]);
-  console.log(exercisesResults);
-  console.log(setExercisesResults);
-  console.log(sets);
+  const [exerciseResults, setExerciseResults] = useState({});
+  
+  
+  const newExercise = exercisesResults.find((exercise) => exercise.name === exerciseResults.name)
+
+  console.log(newExercise)
   console.log(exerciseResults)
 
-  console.log(exerciseResults);
+  console.log(exercisesResults)
 
   return (
     <Row>
