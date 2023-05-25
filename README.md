@@ -17,18 +17,18 @@ This project is still a work in progress. The user interface of the application 
 To run the application, please follow these steps:
 
 1. Clone the repository by executing the following command in your terminal:
-```
+```sh
 git clone https://gitlab.com/i6472606/workout_tracker_app.git
-````
+```
 2. Navigate to the client directory of the project.
 3. Install the necessary dependencies by running the following command:
-````
+```sh
 npm install
-````
+```
 4. Start the application with the following command:
-````
+```sh
 npm start
-````
+```
 
 Nyt sovelluksen pitäisi olla käytettävissä selaimessasi osoitteessa http://localhost:3000
 
